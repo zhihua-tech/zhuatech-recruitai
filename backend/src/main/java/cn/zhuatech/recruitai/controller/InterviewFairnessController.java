@@ -1,0 +1,3 @@
+/* Copyright 2026 上海如静知华信息科技有限公司 */
+package cn.zhuatech.recruitai.controller;import cn.zhuatech.recruitai.common.ApiResponse;import cn.zhuatech.recruitai.service.InterviewFairnessService;import jakarta.validation.Valid;import org.springframework.web.bind.annotation.*;
+@RestController @RequestMapping("/api/recruitai/insights/interview-fairness") public class InterviewFairnessController{private final InterviewFairnessService service;public InterviewFairnessController(InterviewFairnessService service){this.service=service;}@PostMapping ApiResponse<InterviewFairnessService.Result> evaluate(@Valid @RequestBody InterviewFairnessService.Request r){return ApiResponse.ok(service.evaluate(r));}}

@@ -59,3 +59,7 @@ Java 包名为 `cn.zhuatech.recruitai`，数据库名为 `zhuatech_recruitai`。
 | ![微信咨询二维码一](docs/images/zhuatech-wechat-consulting.png) | ![微信咨询二维码二](docs/images/zhuatech-wechat-consulting-2.png) |
 
 SEO：AI招聘系统、简历解析、人才匹配、面试助手、Java招聘系统源码、知华科技、上海如静知华信息科技有限公司。
+
+## 面试公平性门禁
+
+新增 `POST /api/recruitai/insights/interview-fairness`，检查结构化问题、面试官培训、评分卡、受保护属性、面试小组和决策理由，输出 `READY`、`REVIEW` 或 `BLOCK`。
