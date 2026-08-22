@@ -1,4 +1,4 @@
-/* Copyright 2026 上海如静知华信息科技有限公司 */
+/* Copyright 2026 上海如静知华信息科技有限公司 · https://www.zhuatech.cn/ */
 export const domain={
  code:'RECRUITAI',systemName:'知华 AI 招聘协同平台',englishName:'AI TALENT ACQUISITION',theme:{primary:'#4f638e',dark:'#232d47',accent:'#b97958',},
  workspace:'人力资源中心 / 人才获取部',fieldWorkspace:'技术招聘组',period:'2026-08-04 · 实时运营',liveText:'运营数据于 10:36 更新',fieldContextLabel:'当前工作周期',fieldContext:'八月第一周',fieldUser:'顾晨',fieldRole:'招聘顾问',adminUser:'林岚',adminRole:'招聘运营负责人',
