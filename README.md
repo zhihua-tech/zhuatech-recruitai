@@ -63,3 +63,7 @@ SEO：AI招聘系统、简历解析、人才匹配、面试助手、Java招聘�
 ## 面试公平性门禁
 
 新增 `POST /api/recruitai/insights/interview-fairness`，检查结构化问题、面试官培训、评分卡、受保护属性、面试小组和决策理由，输出 `READY`、`REVIEW` 或 `BLOCK`。
+
+## 企业级招聘推荐发布
+
+新增 `POST /api/enterprise/recruitai/hiring-recommendation-release`，覆盖岗位标准、公平性、解释性、告知、人工决策、申诉、版本和数据保留，返回 `RELEASE / PANEL_REVIEW / BLOCKED`。详见 [推荐治理说明](docs/ENTERPRISE_HIRING_RECOMMENDATION.md)。
