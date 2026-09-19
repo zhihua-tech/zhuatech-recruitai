@@ -71,3 +71,7 @@ SEO：AI招聘系统、简历解析、人才匹配、面试助手、Java招聘�
 ## 候选人关键决定审计
 
 `POST /api/enterprise/recruitai/candidate-decision-audit` 对推进、录用或淘汰决定校验岗位证据、AI 告知、公平性、人工责任、评分卡、合理调整、申诉与数据保留，并生成证据覆盖率和稳定审计键。详见[候选人决定审计说明](docs/ENTERPRISE_CANDIDATE_DECISION_AUDIT.md)。
+
+## 候选人数据生命周期
+
+`POST /api/enterprise/recruitai/candidate-data-lifecycle` 根据 AI 处理告知、处理依据、人才库同意、保留期限、删除请求、争议和法律保全输出 `RETAIN / RESTRICT / DELETE`，并明确允许用途与删除范围，避免简历和模型特征无限期留存。
