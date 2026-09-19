@@ -16,9 +16,16 @@ import java.util.ArrayList;
 import java.util.HexFormat;
 import java.util.List;
 
-/** 记录候选人关键决定的岗位证据、人工责任、公平性和申诉闭环。 */
+/**
+ * 记录候选人关键决定的岗位证据、人工责任、公平性和申诉闭环。
+ *
+ * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+ */
 @Service
 public class CandidateDecisionAuditService {
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public AuditResult audit(AuditRequest request) {
         List<String> blockers = new ArrayList<>();
         List<String> actions = new ArrayList<>();
@@ -62,12 +69,18 @@ public class CandidateDecisionAuditService {
         return result(Decision.RECORDED, coverage, request, blockers, actions);
     }
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     private AuditResult result(Decision decision, double coverage, AuditRequest request,
                                List<String> blockers, List<String> actions) {
         return new AuditResult(decision, coverage, List.copyOf(blockers), List.copyOf(actions),
                 auditKey(request));
     }
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     private String auditKey(AuditRequest request) {
         String source = String.join("|", request.applicationId(), request.candidateId(),
                 request.criteriaVersion(), request.decision().name(), request.reviewerId(),
@@ -80,14 +93,23 @@ public class CandidateDecisionAuditService {
         }
     }
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     private boolean blank(String value) {
         return value == null || value.isBlank();
     }
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     private double round(double value) {
         return Math.round(value * 100d) / 100d;
     }
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record AuditRequest(
             @NotBlank String applicationId,
             @NotBlank String candidateId,
@@ -108,11 +130,23 @@ public class CandidateDecisionAuditService {
             boolean retentionPolicyApplied
     ) {}
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record CriterionResult(@NotBlank String name, boolean jobRelated,
                                   String evidenceReference, @Min(0) @Max(100) int score) {}
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record AuditResult(Decision decision, double evidenceCoveragePercent,
                               List<String> blockers, List<String> actions, String auditKey) {}
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public enum HiringDecision { ADVANCE, OFFER, REJECT }
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public enum Decision { RECORDED, PANEL_REVIEW, HOLD, BLOCKED }
 }

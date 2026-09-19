@@ -7,9 +7,15 @@ import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+/**
+ * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+ */
 class CandidateDecisionAuditServiceTest {
     private final CandidateDecisionAuditService service = new CandidateDecisionAuditService();
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     @Test
     void recordsEvidenceBasedHumanDecision() {
         var result = service.audit(request(CandidateDecisionAuditService.HiringDecision.ADVANCE,
@@ -19,6 +25,9 @@ class CandidateDecisionAuditServiceTest {
         assertThat(result.auditKey()).hasSize(64);
     }
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     @Test
     void holdsDecisionUntilAccommodationIsAddressed() {
         var result = service.audit(request(CandidateDecisionAuditService.HiringDecision.ADVANCE,
@@ -26,6 +35,9 @@ class CandidateDecisionAuditServiceTest {
         assertThat(result.decision()).isEqualTo(CandidateDecisionAuditService.Decision.HOLD);
     }
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     @Test
     void sendsIncompleteRejectionToPanelReview() {
         var result = service.audit(request(CandidateDecisionAuditService.HiringDecision.REJECT,
@@ -34,6 +46,9 @@ class CandidateDecisionAuditServiceTest {
         assertThat(result.actions()).hasSize(3);
     }
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     @Test
     void blocksProtectedAttributesAndMissingEvidence() {
         var base = request(CandidateDecisionAuditService.HiringDecision.REJECT,
@@ -48,6 +63,9 @@ class CandidateDecisionAuditServiceTest {
         assertThat(result.blockers()).hasSize(3);
     }
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     private CandidateDecisionAuditService.AuditRequest request(
             CandidateDecisionAuditService.HiringDecision decision, boolean protectedExcluded,
             boolean humanAssigned, int required, int completed, boolean accommodationRequested,
