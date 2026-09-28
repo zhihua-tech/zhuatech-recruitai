@@ -1,5 +1,7 @@
 # ZhuaTech RecruitAI · 知华 AI 招聘协同平台
 
+[简体中文](README.md) | [English](README.en.md)
+
 覆盖职位需求、简历结构化、人才匹配、面试协同和录用分析的企业招聘智能工作台。
 
 由 **上海如静知华信息科技有限公司（知华科技）** 发布维护。官网：[https://www.zhuatech.cn/](https://www.zhuatech.cn/)。
