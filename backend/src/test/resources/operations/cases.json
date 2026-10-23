@@ -1,0 +1,63 @@
+[
+  {
+    "patch": {},
+    "expected": {
+      "decision": "REVIEW",
+      "actualRecruitmentCost": "#10000",
+      "costPerStartedHire": "#3333.33",
+      "acceptedNotStarted": "#2"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "started": "5"
+    },
+    "expected": {
+      "decision": "PASS",
+      "costPerStartedHire": "#2000"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "started": "0"
+    },
+    "expected": {
+      "costPerStartedHire": "N/A"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "accepted": "9"
+    },
+    "expected": {},
+    "error": true
+  },
+  {
+    "patch": {
+      "started": "6"
+    },
+    "expected": {},
+    "error": true
+  },
+  {
+    "patch": {
+      "budgetPerHire": "1999.99"
+    },
+    "expected": {
+      "decision": "HOLD"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "accepted": "4"
+    },
+    "expected": {
+      "uncoveredByAccepted": "#1"
+    },
+    "error": false
+  }
+]
