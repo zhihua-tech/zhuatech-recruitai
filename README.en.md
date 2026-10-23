@@ -1,5 +1,9 @@
 [简体中文](README.md) | **English**
 
+## Functional update: Interview participant availability
+
+Finds common interview availability windows after subtracting each participant's busy intervals, without ranking candidates or sending invitations. Signed-in users can edit inputs and export real computed results. See [API, examples and limitations](docs/AI_OPERATIONS_UPGRADE_20261023.md). No external model calls or automatic business changes; existing licensing and contacts remain unchanged.
+
 # ZhuaTech RecruitAI
 
 > A source-available enterprise project by [ZhuaTech](https://www.zhuatech.cn/) for human resources and workforce operations.
